@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="thumbnails/darkthumbnail.jpg" alt="AirChat dark theme" width="49%">
+  <img src="thumbnails/lightthumbnail.jpg" alt="AirChat light theme" width="49%">
+</p>
+
+<br>
+
 # AirChat
 
 A tiny, offline-first LAN chat app. No server, no internet, no accounts. Just plug everyone into the same network and start talking.
