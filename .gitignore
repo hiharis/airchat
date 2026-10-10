@@ -1,0 +1,27 @@
+# Model files (too large for git)
+models/*.gguf
+*.gguf
+
+# Runtime data
+airchat.db
+chat_history.json
+uploads/*
+!uploads/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+

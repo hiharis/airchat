@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-font="medium">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport for mobile optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AirChat</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2>✨ AirChat</h2>
+                <p>Local Network Chat</p>
+            </div>
+            <input type="text" id="username-input" placeholder="Enter Display Name" autocomplete="off">
+            <button class="btn-primary" onclick="joinChat()">Join Chat</button>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal" style="display: none;">
+        <div class="modal-content glass-panel">
+            <h2>Settings</h2>
+            
+            <div class="setting-group">
+                <label>Theme</label>
+                <select id="theme-select" onchange="applySettings()">
+                    <option value="dark">🌙 Dark Mode</option>
+                    <option value="light">☀️ Light Mode</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label>Font Size</label>
+                <select id="font-select" onchange="applySettings()">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <button class="btn-secondary" onclick="toggleFullScreen()">⛶ Toggle Full Screen</button>
+            </div>
+            
+            <button class="btn-primary mt-4" onclick="closeSettings()">Done</button>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" style="display: none;">
+        <!-- Mobile Overlay -->
+        <div id="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+        <!-- Sidebar -->
+        <div class="sidebar glass-panel" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Online Users</h3>
+                <button class="icon-btn mobile-close-btn" onclick="toggleSidebar()">✖</button>
+            </div>
+            <ul id="user-list"></ul>
+        </div>
+        
+        <!-- Chat Area -->
+        <div class="chat-container">
+            <!-- Top Header -->
+            <div class="chat-header glass-panel">
+                <button class="icon-btn mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+                <div class="brand">AirChat</div>
+                <div style="display:flex; gap: 0.5rem;">
+                    <button class="icon-btn" id="theme-toggle-btn" onclick="toggleTheme()" title="Toggle theme">☀️</button>
+                    <button class="icon-btn" onclick="openSettings()" title="Settings">⚙️</button>
+                </div>
+            </div>
+
+            <!-- Messages Box -->
+            <div id="messages"></div>
+
+            <!-- Input Area -->
+            <div class="input-area glass-panel">
+                <input type="file" id="file-input" accept=".jpg,.jpeg,.png,.pdf" style="display: none;">
+                <button class="icon-btn" onclick="document.getElementById('file-input').click()">📎</button>
+                <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off">
+                <button class="send-btn" onclick="sendMessage()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

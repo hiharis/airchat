@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+websockets
+python-multipart
+aiosqlite
+jinja2
+qrcode
+
