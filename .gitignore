@@ -2,8 +2,12 @@
 models/*.gguf
 *.gguf
 
-# Runtime data
+# Runtime & database data
 airchat.db
+*.db
+*.db-wal
+*.db-shm
+*.sqlite*
 chat_history.json
 uploads/*
 !uploads/.gitkeep
@@ -14,6 +18,15 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+.pytest_cache/
+.ruff_cache/
+
+# Executables & archives
+*.exe
+*.zip
+
+# Test artifacts
+test-artifacts/
 
 # OS
 .DS_Store
@@ -24,4 +37,3 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
-

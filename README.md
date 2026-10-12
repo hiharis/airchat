@@ -32,8 +32,12 @@ It's the chat app I wish existed when I was trying to send a 200 MB patch to a f
 ## What it does
 
 - **Real-time chat** between any devices on the same network
-- **File and image sharing** — drag, drop, done
-- **Message history** — the last few minutes come back when you reconnect
+- **Emoji reactions** — tap or hover to react with 👍 ❤️ 😂 😮 😢 🔥
+- **Instant typing indicator** — see when someone is typing without lagging the network
+- **Smart image compression** — auto-shrinks camera photos for weak hotspots (tap HD when you need the raw file)
+- **Delta reconnect** — dropped Wi-Fi? Quietly reconnects and downloads only the messages you missed
+- **File and image sharing** — share any file up to 20 MB (drag, drop, done)
+- **Message history** — recent messages stay cached and reload cleanly
 - **Light and dark themes** with matching wallpapers
 - **Mobile-friendly** — designed to work on phones as well as laptops
 - **QR code** in the terminal — scan from a phone, no typing IPs
@@ -51,3 +55,23 @@ It's the chat app I wish existed when I was trying to send a 200 MB patch to a f
 ---
 
 ## Setup
+```text
+pip install -r requirements.txt
+```
+
+## Run
+```text
+python main.py
+```
+
+The server will print a local URL and a QR code. On the same Wi-Fi or hotspot:
+- Phone: scan the QR code
+- Laptop: type the URL shown in the terminal
+
+## Notes
+- The app is designed for personal hotspots or private LANs where devices can reach each other.
+- Some public Wi-Fi networks enable client isolation, which prevents devices from seeing each other. AirChat will not work on those networks.
+- Port 9999 must be allowed through the firewall on the host machine.
+
+## License
+MIT
