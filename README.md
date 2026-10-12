@@ -1,7 +1,4 @@
-<p align="center">
-  <img src="thumbnails/darkthumbnail.jpg" alt="AirChat dark theme" width="49%">
-  <img src="thumbnails/lightthumbnail.jpg" alt="AirChat light theme" width="49%">
-</p>
+
 
 <br>
 
@@ -12,6 +9,11 @@ A tiny, offline-first LAN chat app. No server, no internet, no accounts. Just pl
 Built by a student, for students — because sometimes the fastest way to share a code patch is the network you already have.
 
 ---
+
+<p align="center">
+  <img src="thumbnails/darkthumbnail.jpg" alt="AirChat dark theme" width="49%">
+  <img src="thumbnails/lightthumbnail.jpg" alt="AirChat light theme" width="49%">
+</p>
 
 ## Why this exists
 
